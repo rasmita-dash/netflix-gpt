@@ -1,21 +1,12 @@
 import Header from "./Header";
-import {TMDB_HEADER_OPTIONS} from "../Utilities/constants";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { addNowPlayingMovies } from "../Utilities/moviesSlice";
+import MainContainer from "./MainContainer";
+import useGetNowPlayingMovies from "../Hooks/useGetNowPlayingMovies";
 
 const Browse = () =>{
-    const dispatch=useDispatch();
-    const getNowPlayingMovies = async()=>{
-        const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', TMDB_HEADER_OPTIONS);
-        const json = await data.json();
-        console.log(json.results);
-        dispatch(addNowPlayingMovies(json.results));
-    }
-    useEffect(() => {getNowPlayingMovies()},[]);
+    useGetNowPlayingMovies();
     return (<div>
         <Header></Header>
-        
+        <MainContainer></MainContainer>
         </div>);
 }
 
