@@ -7,3 +7,5 @@ export const TMDB_HEADER_OPTIONS = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0N2JjZGI5MmU1YmRhMjIyMjFjMjZmNWExOWJiYzJmOSIsInN1YiI6IjY1OGJlOGE2YWUzNjY4NzQyZWJmN2YxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JI8aS2lh7NT67iHMhkdFVrso2sZuaJ2hB5r_JkBRUtI'
     }
   };
+
+export const USER_LOGO = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5fRSmTbm_0zv9go1d67EtI53bwPupSJBRr9B7VU4h3ML24V7iFov9dUX51_wK8tk_-Hg&usqp=CAU";
