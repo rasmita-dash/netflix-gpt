@@ -1,11 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Login";
 import Browse from "./Browse";
-import { useEffect } from "react";
-import {onAuthStateChanged} from "firebase/auth";
-import { auth } from "../Utilities/Firebase";
-import { useDispatch } from "react-redux";
-import { addUser, removeUser } from "../Utilities/userSlice";
+import Play from "./Play";
 
 const Body = () =>{
     const AppRouter = createBrowserRouter([
@@ -20,6 +16,10 @@ const Body = () =>{
         {
             path: "/Browse",
             element: <Browse/>
+        },
+        {
+            path: "/Play",
+            element: <Play/>
         }
     ])
     return (<div>
