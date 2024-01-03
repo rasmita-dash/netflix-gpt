@@ -4,10 +4,10 @@ export const TMDB_HEADER_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0N2JjZGI5MmU1YmRhMjIyMjFjMjZmNWExOWJiYzJmOSIsInN1YiI6IjY1OGJlOGE2YWUzNjY4NzQyZWJmN2YxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JI8aS2lh7NT67iHMhkdFVrso2sZuaJ2hB5r_JkBRUtI'
+      Authorization: `Bearer ${process.env.FIREBASE_KEY}`
     }
   };
 
 export const USER_LOGO = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5fRSmTbm_0zv9go1d67EtI53bwPupSJBRr9B7VU4h3ML24V7iFov9dUX51_wK8tk_-Hg&usqp=CAU";
-export const OpenAI_API_KEY ="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";
+export const OpenAI_API_KEY = `${process.env.OPENAI_KEY}`;
 export const MOVIE_SEARCH_API=`https://api.themoviedb.org/3/search/collection?query={search_name}&include_adult=false&language=en-US&page=1`
