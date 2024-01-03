@@ -4,7 +4,7 @@ const MovieCard = (props)=>{
     const movie = props.movie;
     const navigate = useNavigate();
     const openMovie = (movieId) =>{
-        navigate("play")
+        navigate(`/play/${movieId}`);
     }
     return (<div  className="flex">
         <div className="w-60 rounded-lg">

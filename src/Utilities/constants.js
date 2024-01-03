@@ -4,7 +4,7 @@ export const TMDB_HEADER_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${process.env.FIREBASE_KEY}`
+      Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0N2JjZGI5MmU1YmRhMjIyMjFjMjZmNWExOWJiYzJmOSIsInN1YiI6IjY1OGJlOGE2YWUzNjY4NzQyZWJmN2YxMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JI8aS2lh7NT67iHMhkdFVrso2sZuaJ2hB5r_JkBRUtI`
     }
   };
 

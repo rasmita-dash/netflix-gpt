@@ -9,12 +9,14 @@ import { LOGO, USER_LOGO } from "../Utilities/constants";
 import { toggleGPTSearch } from "../Utilities/gptSearchSlice";
 import { SUPPORTED_LANGUAGES } from "../Utilities/languageConstants";
 import { addSelectedLanguage } from "../Utilities/languageSlice";
+import {useLocation} from "react-router-dom";
 
 const Header = () =>{
     const dispatch =useDispatch();
     const navigate =useNavigate();
+    const location = useLocation();  
     const user = useSelector((store)=>store.user);
-    
+    console.log(location.pathname);
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -22,7 +24,7 @@ const Header = () =>{
               // https://firebase.google.com/docs/reference/js/auth.user
               dispatch(addUser({email: user.email, photoURL: user.photoURL, uid: user.uid,
                 displayName: user.displayName}));
-              navigate("/browse");
+            //   navigate("/browse");
             } else {
               // User is signed out
               dispatch(removeUser());
@@ -57,7 +59,7 @@ const Header = () =>{
                 }
             </select>
         {user && <>
-            <button className="bg-red-500 text-white rounded-lg py-2 px-4 my-4 mx-2" onClick={toggleSearch}>GPT Search</button>
+            {location.pathname === "/browse" && <button className="bg-red-500 text-white rounded-lg py-2 px-4 my-4 mx-2" onClick={toggleSearch}>GPT Search</button>}
             <img alt="image" className="w-12 h-12 mx-2" src= {USER_LOGO}></img>
             <button className="font-bold mx-2" onClick={handleLogout}>Logout</button>
             </>}

@@ -18,7 +18,7 @@ const Body = () =>{
             element: <Browse/>
         },
         {
-            path: "/Play",
+            path: "/Play/:movieId",
             element: <Play/>
         }
     ])
